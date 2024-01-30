@@ -3,6 +3,7 @@
 1. Перейти в корень проекта
 2. Выполнить
 ```sh
+cp src/.env.example src/.env
 docker build ./docker/php -t pdf_converter
 docker run -it -v ./src:/var/www/app pdf_converter composer install
 docker run -it -v ./src:/var/www/app pdf_converter php artisan key:generate
