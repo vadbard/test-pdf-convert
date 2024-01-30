@@ -64,7 +64,7 @@ class PdfConvertService
         }
 
         $canvas = $this->imagick->clone();
-        $canvas->newImage(static::WHOLE_WIDTH, static::WHOLE_HEIGHT, 'white', 'jpg' );
+        $canvas->newImage(static::WHOLE_WIDTH, static::WHOLE_HEIGHT, 'green', 'jpg' );
 
         $canvas->compositeImage($this->imagick, imagick::COMPOSITE_OVER, 0, 0);
 
