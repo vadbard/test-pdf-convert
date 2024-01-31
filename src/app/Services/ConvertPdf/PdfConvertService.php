@@ -31,10 +31,6 @@ class PdfConvertService
 
         $this->imagick->setFormat('jpg');
 
-        if ($this->imagick->getImageHeight() > $this->imagick->getImageWidth()) {
-            $this->imagick->rotateImage('#000', 90);
-        }
-
         $this->makeLandscape();
 
         $this->imagick->resizeImage(static::WHOLE_WIDTH, static::WHOLE_HEIGHT, \Imagick::FILTER_GAUSSIAN, 0, true);
